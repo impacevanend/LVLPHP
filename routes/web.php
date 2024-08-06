@@ -21,3 +21,7 @@ Route::get('/', function () {
 
 Route::get('/tareas', [TodosController::class, 'index'])->name('todos');
 Route::post('/tareas', [TodosController::class, 'store'])->name('todos');
+
+Route::get('/tareas/{id}', [TodosController::class, 'show'])->name('todos-show');
+Route::patch('/tareas', [TodosController::class, 'store'])->name('todos-update');
+Route::delete('/tareas', [TodosController::class, 'store'])->name('todos-destroy');
